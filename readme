@@ -1,0 +1,27 @@
+# tradui
+Tradui is Creole for translate. It aims at providing a translation layer for Creole (wiki markup language). Hiccup is used for emitting html.  
+## Warning!!
+This is highly experimental. The API might (will) change, the whole thing might not be working correctly, and it still has big junks missing. The feature list below can be seen as a ToDo list for now ;) Handle with care.
+## Usage
+The example will outline the usage when it's done.
+## (Anticipated) features
+* Compliant with Creole 1.0
+* Additional featuers (extensions) include
+** Code blocks can be used to pretty print source code (using tbd):
+   << clojure 
+       (println "Hello World")
+   >>>
+** Nowiki is treated as a block if it has newline characters within it. Block nowikis are rendered with <pre> tag, inline nowikis rendered without any additional tags around (monospaced font can be turned on by ##).
+** Tilde only escapes characters that otherwise would be treated as markup. If tilde is found in front of other characters it is treated literally: ~example.
+** Underlined and monospaced font styles.
+** Double minus (--) surrounded by spaces produces &ndash; ( – )
+** Headings are given unique generated id's to be referred from TOC, etc.
+## External tools/extensions
+** Support for mathml
+** Produce pdf from html
+
+## License
+
+Copyright (C) 2011
+
+Distributed under the Eclipse Public License, the same as Clojure.
